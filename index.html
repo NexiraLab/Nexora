@@ -1,90 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexora — Skill Passport</title>
 
-  <title>Nexora — Skill Passport</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #111827;
-      text-align: center;
-    }
-
-    .hero {
-      padding: 80px 20px;
-    }
-
-    h1 {
-      font-size: 52px;
-      margin-bottom: 15px;
-    }
-
-    .tagline {
-      font-size: 20px;
-      color: #4b5563;
-      margin-bottom: 30px;
-    }
-
-    button {
-      padding: 15px 28px;
-      border: none;
-      border-radius: 12px;
-      background: #111827;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .features {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      margin: 15px 0;
-      border-radius: 16px;
-    }
-  </style>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#080b16;
+color:#fff;
+line-height:1.6
+}
+.container{
+max-width:1050px;
+margin:auto;
+padding:0 22px
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 0
+}
+.logo{
+font-size:25px;
+font-weight:bold;
+letter-spacing:1px
+}
+.logo span{color:#8b5cf6}
+nav a{
+color:#aaa;
+text-decoration:none;
+margin-left:20px
+}
+.hero{
+padding:90px 0 70px;
+text-align:center
+}
+.badge{
+display:inline-block;
+padding:8px 15px;
+border:1px solid #292d42;
+border-radius:30px;
+color:#a78bfa;
+font-size:14px;
+margin-bottom:22px
+}
+h1{
+font-size:clamp(42px,8vw,78px);
+line-height:1.05;
+margin:0 0 22px
+}
+.gradient{
+background:linear-gradient(90deg,#8b5cf6,#22d3ee);
+-webkit-background-clip:text;
+color:transparent
+}
+.hero p{
+max-width:650px;
+margin:auto;
+color:#a7adbd;
+font-size:19px
+}
+.buttons{
+margin-top:32px
+}
+button{
+border:0;
+padding:15px 24px;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin:6px
+}
+.primary{
+background:#fff;
+color:#080b16
+}
+.secondary{
+background:#171b2b;
+color:#fff;
+border:1px solid #30364d
+}
+section{
+padding:65px 0
+}
+.title{
+text-align:center;
+font-size:34px;
+margin-bottom:12px
+}
+.subtitle{
+text-align:center;
+color:#8f96a8;
+margin-bottom:40px
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+.card{
+background:#111625;
+border:1px solid #242a3d;
+padding:28px;
+border-radius:20px
+}
+.icon{
+font-size:30px
+}
+.card h3{margin-bottom:8px}
+.card p{
+color:#9299aa;
+margin:0
+}
+.passport{
+max-width:700px;
+margin:auto;
+background:#111625;
+border:1px solid #30364d;
+border-radius:24px;
+padding:28px
+}
+.profile{
+display:flex;
+align-items:center;
+gap:18px;
+border-bottom:1px solid #292f42;
+padding-bottom:20px
+}
+.avatar{
+width:58px;
+height:58px;
+border-radius:50%;
+background:linear-gradient(135deg,#8b5cf6,#22d3ee);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:22px
+}
+.skill{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 0;
+border-bottom:1px solid #202638
+}
+.verified{
+color:#34d399;
+font-size:14px
+}
+.cta{
+text-align:center;
+background:#111625;
+border:1px solid #252b3e;
+border-radius:25px;
+padding:55px 20px
+}
+.cta p{
+color:#969dae
+}
+footer{
+text-align:center;
+padding:35px 0;
+color:#666d7e;
+font-size:14px
+}
+@media(max-width:700px){
+.grid{grid-template-columns:1fr}
+nav a{display:none}
+.hero{padding-top:55px}
+}
+</style>
 </head>
 
 <body>
 
-  <section class="hero">
-    <h1>Nexora</h1>
+<div class="container">
 
-    <p class="tagline">
-      Proof what you learn. Own what you achieve.
-    </p>
+<nav>
+<div class="logo">Nex<span>ora</span></div>
+<div>
+<a href="#features">Features</a>
+<a href="#passport">Passport</a>
+</div>
+</nav>
 
-    <button>Explore Skill Passport</button>
-  </section>
+<section class="hero">
+<div class="badge">The future of verifiable learning</div>
 
-  <section class="features">
+<h1>
+Proof what you <span class="gradient">learn.</span><br>
+Own what you achieve.
+</h1>
 
-    <div class="card">
-      <h2>🎓 Verifiable Skills</h2>
-      <p>Turn real learning into trusted digital proof.</p>
-    </div>
+<p>
+Nexora transforms real learning, projects and achievements
+into a portable skill passport that can be verified.
+</p>
 
-    <div class="card">
-      <h2>🚀 Project-Based Proof</h2>
-      <p>Show what you can actually build, not just what you claim.</p>
-    </div>
+<div class="buttons">
+<button class="primary" onclick="showMessage()">Explore Skill Passport</button>
+<button class="secondary" onclick="document.getElementById('features').scrollIntoView()">How it works</button>
+</div>
+</section>
 
-    <div class="card">
-      <h2>🔐 Your Achievement</h2>
-      <p>Build a portable record of your skills and achievements.</p>
-    </div>
+<section id="features">
 
-  </section>
+<h2 class="title">Why Nexora?</h2>
+<p class="subtitle">A new way to prove what you can actually do.</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🎓</div>
+<h3>Verifiable Skills</h3>
+<p>
+Turn learning into trusted digital proof instead of relying only on certificates.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Project-Based Proof</h3>
+<p>
+Show real projects and practical achievements that demonstrate your abilities.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔐</div>
+<h3>Portable Achievement</h3>
+<p>
+Keep your verified learning record with you and build your professional identity.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="passport">
+
+<h2 class="title">Example Skill Passport</h2>
+<p class="subtitle">A simple preview of what a Nexora profile can look like.</p>
+
+<div class="passport">
+
+<div class="profile">
+<div class="avatar">NX</div>
+<div>
+<h3 style="margin:0">Nexora Learner</h3>
+<p style="margin:0;color:#8f96a8">Verified learning profile</p>
+</div>
+</div>
+
+<div class="skill">
+<span>Web Development</span>
+<span class="verified">✓ Verified</span>
+</div>
+
+<div class="skill">
+<span>Blockchain Fundamentals</span>
+<span class="verified">✓ Verified</span>
+</div>
+
+<div class="skill">
+<span>Project Building</span>
+<span class="verified">✓ Verified</span>
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="cta">
+<h2>Build proof. Not just promises.</h2>
+<p>
+Nexora is building a more transparent way to discover
+and verify real skills.
+</p>
+<button class="primary" onclick="showMessage()">Join the future</button>
+</div>
+
+</section>
+
+<footer>
+© 2026 Nexora · Built for the future of learning
+</footer>
+
+</div>
+
+<script>
+function showMessage(){
+alert("Nexora Skill Passport is coming soon.");
+}
+</script>
 
 </body>
 </html>
